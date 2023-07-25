@@ -1,0 +1,114 @@
+.outerdiv{
+    position: relative;
+   height: 650px;
+
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-image: url(https://i.pinimg.com/236x/3a/52/db/3a52db210b59c9f5f4c2d45221cc2953.jpg);
+}
+#temp {
+    margin-top: 1rem;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 5rem;
+    position: absolute;
+    margin-top: 15rem;
+    margin-left: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.made-with-love {
+    font-weight: 800;
+    color: white;
+    background: rgb(9, 3, 8);
+    font-size: 15px;
+    padding: 8px;
+    position: absolute;
+    bottom: 0px;
+    left: 0; 
+    right: 0;
+    text-align: center; 
+  }
+
+
+
+.heart {
+    color: #ff0000;
+}
+
+
+/* Empty level */
+.fa-thermometer-empty {
+    color: green; 
+  }
+  
+  /* Quarter level */
+  .fa-thermometer-quarter {
+    color: blue; 
+  }
+  
+  /* Half level */
+  .fa-thermometer-half {
+    color: yellow; 
+  }
+  
+  /* Three-quarter level */
+  .fa-thermometer-three-quarter {
+    color: rgb(0, 187, 255); 
+  }
+  
+  /* Full level */
+  .fa-thermometer-full {
+    color: rgb(137, 242, 198); 
+  }
+  
+@media(max-width:700px){
+    
+    .innerdiv{
+        margin-right: 3rem;
+    }
+}
+.span{
+    color: white;
+}
+#temp {
+    margin-top: 20px; 
+    margin-left: 0;
+  }
+ 
+
+  
+  @media (max-width: 700px) {
+    h1{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 18rem;
+        font-size: 2rem;
+        transform: translateX(-50%);
+    }
+    .innerdiv {
+        margin-right: 10rem;
+      /* margin: 20 auto;  */
+    }
+  .outerdiv{
+    height:702px;
+  }
+  #temp{
+    margin-left: 1rem;
+    font-size: 5rem;
+  }
+}
+    
+  
+  

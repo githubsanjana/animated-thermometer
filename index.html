@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animated thermometer</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+  <div class="outerdiv">
+    <div class="innerdiv">
+      <h1>I am Thermometer <span id="temp" class="fa"></span></h1>
+    </div>
+    <div class="made-with-love">
+      @ Made with <span class="heart">❤️</span> by Sanjana
+    </div>
+  </div>
+
+  <script>
+    let temp = null;
+    let level = 0;
+    const interval = 500; 
+
+    const tempload = () => {
+      temp = document.getElementById('temp');
+      temp.classList.add('fa', 'fa-thermometer-empty');
+    };
+
+    const animateThermometer = () => {
+      switch (level) {
+        case 0:
+          temp.classList.remove('fa-thermometer-full');
+          temp.classList.add('fa-thermometer-empty');
+          break;
+        case 1:
+          temp.classList.remove('fa-thermometer-empty');
+          temp.classList.add('fa-thermometer-quarter');
+          break;
+        case 2:
+          temp.classList.remove('fa-thermometer-quarter');
+          temp.classList.add('fa-thermometer-half');
+          break;
+        case 3:
+          temp.classList.remove('fa-thermometer-half');
+          temp.classList.add('fa-thermometer-three-quarter');
+          break;
+        case 4:
+          temp.classList.remove('fa-thermometer-three-quarter');
+          temp.classList.add('fa-thermometer-full');
+          break;
+      }
+      level = (level + 1) % 5; // Increment level and loop back to 0 after reaching 4
+    };
+
+    tempload();
+    setInterval(animateThermometer, interval);
+  </script>
+</body>
+</html>
